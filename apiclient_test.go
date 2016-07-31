@@ -14,6 +14,14 @@ func TestNewAPIClient(t *testing.T) {
 	}
 }
 
+func TestAPIClientSetUnits(t *testing.T) {
+	var client = DarkSky.NewAPIClient("TEST_API_KEY")
+	client.Units = DarkSky.SI
+	if client.Units != DarkSky.SI {
+		t.Error("couldn't set units on API client")
+	}
+}
+
 func TestGetForecast(t *testing.T) {
 	var client = DarkSky.NewAPIClient(os.Getenv("FORECAST_IO_API_KEY"))
 	_, err := client.GetForecast(0, 0)
