@@ -3,6 +3,7 @@ package darksky_test
 import (
 	"os"
 	"testing"
+	"time"
 
 	"github.com/sxg/DarkSky"
 )
@@ -32,7 +33,15 @@ func TestAPIClientSetLanguage(t *testing.T) {
 
 func TestGetForecast(t *testing.T) {
 	var client = darksky.NewAPIClient(os.Getenv("FORECAST_IO_API_KEY"))
-	_, err := client.GetForecast(0, 0)
+	_, err := client.GetForecast(30, 30)
+	if err != nil {
+		t.Error(err)
+	}
+}
+
+func TestGetForecastAtTime(t *testing.T) {
+	var client = darksky.NewAPIClient(os.Getenv("FORECAST_IO_API_KEY"))
+	_, err := client.GetForecastAtTime(30, 30, time.Now())
 	if err != nil {
 		t.Error(err)
 	}
