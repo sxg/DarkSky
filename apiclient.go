@@ -28,9 +28,7 @@ func NewAPIClient(apiKey string) *APIClient {
 // GetForecast gets the current forecast at a specified latitude and longitude.
 func (client *APIClient) GetForecast(lat, lon float64) (*Forecast, error) {
 	// Create URL string from host, API key, and lat/lon
-	var latLonPath = strings.Join([]string{strconv.FormatFloat(lat, 'f', 6, 64), strconv.FormatFloat(lon, 'f', 6, 64)}, ",")
-	var urlString = strings.Join([]string{darkSkyURL, client.apiKey, latLonPath}, "/")
-	var url, err = url.Parse(urlString)
+	url, err := buildURL(client.apiKey, lat, lon)
 	if err != nil {
 		return nil, err
 	}
@@ -55,4 +53,14 @@ func (client *APIClient) GetForecast(lat, lon float64) (*Forecast, error) {
 		return nil, err
 	}
 	return &forecast, nil
+}
+
+func buildURL(apiKey string, lat, lon float64) (*url.URL, error) {
+	var latLonPath = strings.Join([]string{strconv.FormatFloat(lat, 'f', 6, 64), strconv.FormatFloat(lon, 'f', 6, 64)}, ",")
+	var urlString = strings.Join([]string{darkSkyURL, apiKey, latLonPath}, "/")
+	var url, err = url.Parse(urlString)
+	if err != nil {
+		return nil, err
+	}
+	return url, nil
 }
