@@ -10,5 +10,5 @@ type Forecast struct {
 	Hourly    DataBlock `json:"hourly"`
 	Daily     DataBlock `json:"daily"`
 	Alerts    []*Alert  `json:"alerts"`
-	Flags     []*Flag   `json:"flags"`
+	Flags     Flag      `json:"flags"`
 }
