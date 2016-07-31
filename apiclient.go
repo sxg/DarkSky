@@ -56,6 +56,36 @@ func (client *APIClient) GetForecast(lat, lon float64) (*Forecast, error) {
 	return &forecast, nil
 }
 
+// GetForecastAtTime gets the forecast at a specified latitude, longitude, and time.
+func (client *APIClient) GetForecastAtTime(lat, lon float64, time time.Time) (*Forecast, error) {
+	// Create URL string from host, API key, and lat/lon
+	url, err := buildURL(client.apiKey, lat, lon, time)
+	if err != nil {
+		return nil, err
+	}
+
+	// Make a GET request to the URL
+	resp, err := http.Get(url.String())
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	// Read the response
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	// Parse the body into a Forecast
+	var forecast Forecast
+	err = json.Unmarshal(body, &forecast)
+	if err != nil {
+		return nil, err
+	}
+	return &forecast, nil
+}
+
 func buildURL(apiKey string, lat, lon float64, time time.Time) (*url.URL, error) {
 	pathSlice := []string{strconv.FormatFloat(lat, 'f', 6, 64), strconv.FormatFloat(lon, 'f', 6, 64)}
 	if !time.IsZero() {
