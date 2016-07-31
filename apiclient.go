@@ -14,7 +14,6 @@ type APIClient struct {
 
 const (
 	darkSkyURL = "https://api.forecast.io/forecast"
-	testURL    = "https://api.forecast.io/forecast/c00106496bfdbb8374474a24f7371e2d/41.4993,81.6944"
 )
 
 func (client *APIClient) GetForecast(lat, lon float64) (*Forecast, error) {
