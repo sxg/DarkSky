@@ -36,14 +36,14 @@ func (client *APIClient) GetForecast(lat, lon float64) (*Forecast, error) {
 	// Make a GET request to the URL
 	resp, err := http.Get(url.String())
 	if err != nil {
-		panic(err)
+		return nil, err
 	}
 	defer resp.Body.Close()
 
 	// Read the response
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		panic(err)
+		return nil, err
 	}
 
 	// Parse the body into a Forecast
