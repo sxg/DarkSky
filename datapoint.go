@@ -1,4 +1,4 @@
-package DarkSky
+package darksky
 
 // DataPoint contains weather data for a specific location and time.
 type DataPoint struct {

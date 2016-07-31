@@ -1,4 +1,4 @@
-package DarkSky
+package darksky
 
 // Units in which the Dark Sky API data will be returned.
 type Units string

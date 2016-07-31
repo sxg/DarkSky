@@ -1,4 +1,4 @@
-package DarkSky
+package darksky
 
 // Flag containing various metadata related to a Forecast request.
 type Flag struct {

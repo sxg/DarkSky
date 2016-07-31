@@ -1,4 +1,4 @@
-package DarkSky
+package darksky
 
 // Language in which data from the Dark Sky API will be returned.
 type Language string

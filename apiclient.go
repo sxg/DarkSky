@@ -1,4 +1,4 @@
-package DarkSky
+package darksky
 
 import (
 	"encoding/json"

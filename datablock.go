@@ -1,4 +1,4 @@
-package DarkSky
+package darksky
 
 // DataBlock contains weather data for a specific location over a period of time.
 type DataBlock struct {

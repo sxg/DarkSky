@@ -1,4 +1,4 @@
-package DarkSky
+package darksky
 
 // Forecast weather data for a location at a specific time.
 type Forecast struct {
