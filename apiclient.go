@@ -7,6 +7,7 @@ import (
 	"net/url"
 	"strconv"
 	"strings"
+	"time"
 )
 
 // APIClient to interact with the Dark Sky API.
@@ -28,7 +29,7 @@ func NewAPIClient(apiKey string) *APIClient {
 // GetForecast gets the current forecast at a specified latitude and longitude.
 func (client *APIClient) GetForecast(lat, lon float64) (*Forecast, error) {
 	// Create URL string from host, API key, and lat/lon
-	url, err := buildURL(client.apiKey, lat, lon)
+	url, err := buildURL(client.apiKey, lat, lon, time.Time{})
 	if err != nil {
 		return nil, err
 	}
@@ -55,12 +56,17 @@ func (client *APIClient) GetForecast(lat, lon float64) (*Forecast, error) {
 	return &forecast, nil
 }
 
-func buildURL(apiKey string, lat, lon float64) (*url.URL, error) {
-	var latLonPath = strings.Join([]string{strconv.FormatFloat(lat, 'f', 6, 64), strconv.FormatFloat(lon, 'f', 6, 64)}, ",")
-	var urlString = strings.Join([]string{darkSkyURL, apiKey, latLonPath}, "/")
+func buildURL(apiKey string, lat, lon float64, time time.Time) (*url.URL, error) {
+	pathSlice := []string{strconv.FormatFloat(lat, 'f', 6, 64), strconv.FormatFloat(lon, 'f', 6, 64)}
+	if !time.IsZero() {
+		pathSlice = append(pathSlice, strconv.FormatInt(time.Unix(), 10))
+	}
+	var path = strings.Join(pathSlice, ",")
+	var urlString = strings.Join([]string{darkSkyURL, apiKey, path}, "/")
 	var url, err = url.Parse(urlString)
 	if err != nil {
 		return nil, err
 	}
+
 	return url, nil
 }
