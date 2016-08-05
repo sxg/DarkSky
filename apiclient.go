@@ -86,6 +86,8 @@ func (client *APIClient) GetForecastAtTime(lat, lon float64, time time.Time) (*F
 	return &forecast, nil
 }
 
+// Private functions
+
 func buildURL(apiKey string, lat, lon float64, time time.Time) (*url.URL, error) {
 	pathSlice := []string{strconv.FormatFloat(lat, 'f', 6, 64), strconv.FormatFloat(lon, 'f', 6, 64)}
 	if !time.IsZero() {
