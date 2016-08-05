@@ -4,18 +4,18 @@ package darksky
 type Units string
 
 const (
-	// SI units.
-	SI Units = "si"
+	// UnitsSI units.
+	UnitsSI Units = "si"
 
-	// US uses United States units and the default option.
-	US = "us"
+	// UnitsUS uses United States units and the default option.
+	UnitsUS = "us"
 
-	// CA uses Canadian units.
-	CA = "ca"
+	// UnitsCA uses Canadian units.
+	UnitsCA = "ca"
 
-	// UK uses United Kingdom units.
-	UK = "uk2"
+	// UnitsUK uses United Kingdom units.
+	UnitsUK = "uk2"
 
-	// Auto uses the appropriate units based on the location for which weather data is requested.
-	Auto = "auto"
+	// UnitsAuto uses the appropriate units based on the location for which weather data is requested.
+	UnitsAuto = "auto"
 )
