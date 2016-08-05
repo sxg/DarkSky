@@ -4,33 +4,33 @@ package darksky
 type Icon string
 
 const (
-	// ClearDay represents a clear day.
-	ClearDay Icon = "clear-day"
+	// IconClearDay represents a clear day.
+	IconClearDay Icon = "clear-day"
 
-	// ClearNight represents a clear night.
-	ClearNight = "clear-night"
+	// IconClearNight represents a clear night.
+	IconClearNight = "clear-night"
 
-	// Rain represents a rainy day or night.
-	Rain = "rain"
+	// IconRain represents a rainy day or night.
+	IconRain = "rain"
 
-	// Snow represents a snowy day or night.
-	Snow = "snow"
+	// IconSnow represents a snowy day or night.
+	IconSnow = "snow"
 
-	// Sleet represents a sleety day or night.
-	Sleet = "sleet"
+	// IconSleet represents a sleety day or night.
+	IconSleet = "sleet"
 
-	// Wind represents a windy day or night.
-	Wind = "wind"
+	// IconWind represents a windy day or night.
+	IconWind = "wind"
 
-	// Fog represents a foggy day or night.
-	Fog = "fog"
+	// IconFog represents a foggy day or night.
+	IconFog = "fog"
 
-	// Cloudy represents a cloudy day or night.
-	Cloudy = "cloudy"
+	// IconCloudy represents a cloudy day or night.
+	IconCloudy = "cloudy"
 
-	// PartlyCloudyDay represents a partly cloudy day.
-	PartlyCloudyDay = "partly-cloudy-day"
+	// IconPartlyCloudyDay represents a partly cloudy day.
+	IconPartlyCloudyDay = "partly-cloudy-day"
 
-	// PartlyCloudyNight represents a partly cloudy night.
-	PartlyCloudyNight = "partly-cloudy-night"
+	// IconPartlyCloudyNight represents a partly cloudy night.
+	IconPartlyCloudyNight = "partly-cloudy-night"
 )
