@@ -4,90 +4,90 @@ package darksky
 type Language string
 
 const (
-	// Arabic language.
-	Arabic Language = "ar"
+	// LanguageArabic language.
+	LanguageArabic Language = "ar"
 
-	// Belarusian language.
-	Belarusian = "be"
+	// LanguageBelarusian language.
+	LanguageBelarusian = "be"
 
-	// Bosnian language.
-	Bosnian = "bs"
+	// LanguageBosnian language.
+	LanguageBosnian = "bs"
 
-	// Czech language.
-	Czech = "cs"
+	// LanguageCzech language.
+	LanguageCzech = "cs"
 
-	// German language.
-	German = "de"
+	// LanguageGerman language.
+	LanguageGerman = "de"
 
-	// Greek language.
-	Greek = "el"
+	// LanguageGreek language.
+	LanguageGreek = "el"
 
-	// English language and the default.
-	English = "en"
+	// LanguageEnglish language and the default.
+	LanguageEnglish = "en"
 
-	// Spanish language.
-	Spanish = "es"
+	// LanguageSpanish language.
+	LanguageSpanish = "es"
 
-	// French language.
-	French = "fr"
+	// LanguageFrench language.
+	LanguageFrench = "fr"
 
-	// Croatian language.
-	Croatian = "hr"
+	// LanguageCroatian language.
+	LanguageCroatian = "hr"
 
-	// Hungarian language.
-	Hungarian = "hu"
+	// LanguageHungarian language.
+	LanguageHungarian = "hu"
 
-	// Indonesian language.
-	Indonesian = "id"
+	// LanguageIndonesian language.
+	LanguageIndonesian = "id"
 
-	// Italian language.
-	Italian = "it"
+	// LanguageItalian language.
+	LanguageItalian = "it"
 
-	// Icelandic language.
-	Icelandic = "is"
+	// LanguageIcelandic language.
+	LanguageIcelandic = "is"
 
-	// Cornish language.
-	Cornish = "kw"
+	// LanguageCornish language.
+	LanguageCornish = "kw"
 
-	// NorwegianBokmål represents the Norwegian Bokmål language.
-	NorwegianBokmål = "nb"
+	// LanguageNorwegianBokmål represents the Norwegian Bokmål language.
+	LanguageNorwegianBokmål = "nb"
 
-	// Dutch language.
-	Dutch = "nl"
+	// LanguageDutch language.
+	LanguageDutch = "nl"
 
-	// Polish language.
-	Polish = "pl"
+	// LanguagePolish language.
+	LanguagePolish = "pl"
 
-	// Portuguese language.
-	Portuguese = "pt"
+	// LanguagePortuguese language.
+	LanguagePortuguese = "pt"
 
-	// Russian language.
-	Russian = "ru"
+	// LanguageRussian language.
+	LanguageRussian = "ru"
 
-	// Slovak language.
-	Slovak = "sk"
+	// LanguageSlovak language.
+	LanguageSlovak = "sk"
 
-	// Serbian language.
-	Serbian = "sr"
+	// LanguageSerbian language.
+	LanguageSerbian = "sr"
 
-	// Swedish language.
-	Swedish = "sv"
+	// LanguageSwedish language.
+	LanguageSwedish = "sv"
 
-	// Tetum language.
-	Tetum = "tet"
+	// LanguageTetum language.
+	LanguageTetum = "tet"
 
-	// Turkish language.
-	Turkish = "tr"
+	// LanguageTurkish language.
+	LanguageTurkish = "tr"
 
-	// Ukrainian language.
-	Ukrainian = "uk"
+	// LanguageUkrainian language.
+	LanguageUkrainian = "uk"
 
-	// PigLatin represents the Pig Latin language.
-	PigLatin = "x-pig-latin"
+	// LanguagePigLatin represents the Pig Latin language.
+	LanguagePigLatin = "x-pig-latin"
 
-	// SimplifiedChinese represents the simplified Chinese language.
-	SimplifiedChinese = "zh"
+	// LanguageSimplifiedChinese represents the simplified Chinese language.
+	LanguageSimplifiedChinese = "zh"
 
-	// TraditionalChinese represents the traditional Chinese language.
-	TraditionalChinese = "zh-tw"
+	// LanguageTraditionalChinese represents the traditional Chinese language.
+	LanguageTraditionalChinese = "zh-tw"
 )
