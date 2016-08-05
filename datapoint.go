@@ -4,7 +4,7 @@ package darksky
 type DataPoint struct {
 	Time                        *float64 `json:"time"`
 	Summary                     *string  `json:"summary"`
-	Icon                        *string  `json:"icon"`
+	Icon                        Icon     `json:"icon"`
 	SunriseTime                 *float64 `json:"sunriseTime"`
 	SunsetTime                  *float64 `json:"sunsetTime"`
 	MoonPhase                   *float64 `json:"moonPhase"`
