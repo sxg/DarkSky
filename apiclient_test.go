@@ -17,16 +17,16 @@ func TestNewAPIClient(t *testing.T) {
 
 func TestAPIClientSetUnits(t *testing.T) {
 	var client = darksky.NewAPIClient(os.Getenv("FORECAST_IO_API_KEY"))
-	client.Units = darksky.SI
-	if client.Units != darksky.SI {
+	client.Units = darksky.UnitsSI
+	if client.Units != darksky.UnitsSI {
 		t.Error("couldn't set units on API client")
 	}
 }
 
 func TestAPIClientSetLanguage(t *testing.T) {
 	var client = darksky.NewAPIClient(os.Getenv("FORECAST_IO_API_KEY"))
-	client.Language = darksky.French
-	if client.Language != darksky.French {
+	client.Language = darksky.LanguageFrench
+	if client.Language != darksky.LanguageFrench {
 		t.Error("couldn't set language on API client")
 	}
 }
